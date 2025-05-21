@@ -1,0 +1,170 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1, h2, h3 {
+    color: #333;
+    text-align: center;
+}
+h2 {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 30px;
+}
+
+section {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px dashed #ccc;
+}
+section:last-of-type {
+    border-bottom: none;
+}
+
+
+fieldset {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+legend {
+    font-weight: bold;
+    color: #555;
+    padding: 0 10px;
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+.question p {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+input[type="text"],
+textarea {
+    width: 95%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+input[type="text"] {
+    width: auto; /* Allow specific sizing for "other" fields */
+}
+
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+.rating-scale, .implementation-scale {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.rating-scale label, .implementation-scale label {
+    display: inline-block; /* Horizontal layout */
+    margin-right: 10px;
+    padding: 5px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 0.9em;
+}
+.rating-scale label input[type="radio"],
+.implementation-scale label input[type="radio"] {
+    display: none; /* Hide actual radio button */
+}
+
+.rating-scale label.selected,
+.implementation-scale label.selected {
+    background-color: #007bff;
+    color: white;
+    border-color: #0056b3;
+}
+
+
+.rating-item {
+    padding: 10px;
+    border: 1px solid #eee;
+    margin-top: 10px;
+    background-color: #fff;
+}
+.rating-item.disabled {
+    background-color: #e9ecef;
+    opacity: 0.7;
+}
+.rating-item.disabled .rating-scale label {
+    cursor: not-allowed;
+    background-color: #f8f9fa;
+}
+
+
+button[type="submit"], #downloadData {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-top: 20px;
+}
+button[type="submit"]:hover, #downloadData:hover {
+    background-color: #218838;
+}
+
+#resultsContainer {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #e9f5ff;
+    border: 1px solid #b3d7ff;
+    border-radius: 5px;
+}
+#resultsContainer textarea {
+    width: 100%;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Small screen adjustments */
+@media (max-width: 600px) {
+    .rating-scale, .implementation-scale {
+        flex-direction: column;
+    }
+    .rating-scale label, .implementation-scale label {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+}
